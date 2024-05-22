@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產能規劃</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightgray;
+        }
+        .title {
+            margin-top: 20px;
+        }
+        #activityChart {
+            max-width: 400px;
+            max-height: 400px;
+            margin: auto;
+        }
+        #detail {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">產能規劃</h1>
+    <form>
+        <h2>將規劃、組織、用人、領導與控制五項管理功能，結合企業之產銷過程中，會以經濟合理的方法獲得組織機構所需之物料。內容包含產銷協調，並規劃生產排程、評估人力、機器設備以及零件原物料的需求，過程中需考量工人能力、機器限制、生產計畫和生產進度等因素，進行適當的工作分配。同時，提出有關現存品質或生產標準方面的修改建議，以確保產品品質達到最理想水平。</h2>
+    </form>
+    <br/>
+    <button class="site" data-bs-toggle="collapse" data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+        ↓↓↓ 系上課程推薦 ↓↓↓
+    </button><br/>
+
+    <div class="collapse" id="courses">
+        <!-- 系上課程推薦 -->
+        <h1 class="title">系上課程推薦</h1>
+        <p class="title-p">50% 以上的學長姐都推薦！！！</p>
+        <div class="card card-body">
+            <div class="content-container">
+                <div class="left-side">
+                    <!-- 必修課程 -->
+                    <h2>必修課程</h2>
+                    <div>
+                        <details>
+                            <summary class="detail">生產與作業管理</summary>
+                            <p class="detail">各項製程規劃與管理方法</p>
+                        </details>
+                        <details>
+                            <summary class="detail">工業管理概論</summary>
+                            <p class="detail">工業管理綜觀，涵蓋生產、品質、會計、物流等領域，提供理論與實務工具。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">統計學</summary>
+                            <p class="detail">統計基礎與應用，培養統計思維，促進管理決策的正確性與有效性。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">工作研究</summary>
+                            <p class="detail">解釋方法研究和時間測量常用技術的理論基礎；了解工作學習領域應用的最新技術。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">作業研究</summary>
+                            <p class="detail">解決由實際生活中所產生的機率性問題，包括如何將其模式化並作成最佳決策。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">管理數學</summary>
+                            <p class="detail">數學基礎的管理學科，強調線性代數及應用，奠定模型與預測基礎。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">品質管理</summary>
+                            <p class="detail">包含品質改善；全面品質管理和 ISO-9001；六標準差；統計製程管制的方法和理念。</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <!-- 選修課程 -->
+                    <h2>選修課程</h2>
+                    <div>
+                        <details>
+                            <summary class="detail">精實生產與管理</summary>
+                            <p class="detail">此課程涵蓋利益與績效指標、浪費、5S、程序、價值溪流、標準化、全面生產管理、TQM、國家品質獎。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">存貨理論</summary>
+                            <p class="detail">涵蓋庫存控制、生產、配送和供應鏈中的行銷系統，強調庫存和供應鏈管理的建模技能、應用和概念，要求熟練數學規劃和運籌研究。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">半導體製造與管理</summary>
+                            <p class="detail">本課程深入介紹半導體製造技術、供應鏈與營運管理，透過產業案例掌握實務應用與發展。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">工業4.0概論</summary>
+                            <p class="detail">教授工業4.0概念、技術與應用，包括物聯網、雲端運算、大數據、人工智慧、智慧營運及智慧製造。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">排程理論</summary>
+                            <p class="detail">課程使學生理解工作排程與排序，加強系統理論背景，涵蓋排程問題介紹、最佳化、單機、流程型工廠等主題。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">供應鏈管理</summary>
+                            <p class="detail">探索供應鏈管理策略與設計，包括庫存、網路規劃、信息可見度、風險管理、全球物流等。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">資料庫管理系統</summary>
+                            <p class="detail">介紹資料庫管理系統及相關主題，包括關聯式模型、SQL、MySQL、資料庫設計、交易管理、並行控制與回復。</p>
+                        </details>
+                        <details>
+                            <summary class="detail">智慧營運管理</summary>
+                            <p class="detail">旨在培育大學部學生了解生產力4.0思維、關鍵技術、商業模式創新與營運管理，以培育產業人才。</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <p class="ps">※詳細課程介紹請至 <a href="https://querycourse.ntust.edu.tw/querycourse/#/"><strong>臺灣科技大學學生資訊系統</strong></a> 查詢</p>
+        </div>
+    </div>
+    <br/>
+    <button class="site" data-bs-toggle="collapse" data-bs-target="#activities" aria-expanded="false" aria-controls="activities">
+        ↓↓↓ 課外活動推薦指數 ↓↓↓
+    </button><br/>
+    <div class="collapse" id="activities">
+        <!-- 課外活動推薦指數 -->
+        <div class="title">課外活動推薦指數</div>
+        <div class="card card-body">
+            <canvas id="activityChart"></canvas>
+            <div id="detail">
+                <h2 id="detailTitle"></h2>
+                <h2 id="detailIndex"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        const activityData = [
+            { name: "校外實習", index: "36.36%" },
+            { name: "各式比賽", index: "7.27%" },
+            { name: "打工", index: "20%" },
+            { name: "企業參訪", index: "10.91%" },
+            { name: "學校社團", index: "16.36%" },
+            { name: "培訓課程", index: "9.09%" }
+        ];
+
+        const ctx = document.getElementById('activityChart').getContext('2d');
+        const labels = activityData.map(activity => activity.name);
+        const data = activityData.map(activity => parseFloat(activity.index));
+
+        const activityChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false,
+                plugins: {
+                    tooltip: {
+                        enabled: false,
+                        external: function(context) {
+                            const tooltipEl = document.getElementById('detail');
+                            if (context.tooltip.opacity === 0) {
+                                tooltipEl.style.opacity = 0;
+                                return;
+                            }
+
+                            if (context.tooltip.body) {
+                                const dataIndex = context.tooltip.dataPoints[0].dataIndex;
+                                const activity = activityData[dataIndex];
+                                
+                                document.getElementById('detailTitle').innerText = activity.name;
+                                document.getElementById('detailIndex').innerText = `推薦指數: ${activity.index}`;
+
+                                const position = context.chart.canvas.getBoundingClientRect();
+                                tooltipEl.style.opacity = 1;
+                                tooltipEl.style.left = position.left + window.pageXOffset + context.tooltip.caretX + 'px';
+                                tooltipEl.style.top = position.top + window.pageYOffset + context.tooltip.caretY + 'px';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('activityChart').addEventListener('mousemove', function(event) {
+            const points = activityChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, false);
+            if (points.length) {
+                const firstPoint = points[0];
+                const label = activityChart.data.labels[firstPoint.index];
+                const value = activityChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+                const activity = activityData[firstPoint.index];
+                
+                const tooltipEl = document.getElementById('detail');
+                tooltipEl.style.display = 'block';
+                tooltipEl.style.left = event.pageX + 'px';
+                tooltipEl.style.top = event.pageY + 'px';
+                document.getElementById('detailTitle').innerText = activity.name;
+                document.getElementById('detailIndex').innerText = `推薦指數: ${activity.index}`;
+            } else {
+                document.getElementById('detail').style.display = 'none';
+            }
+        });
+
+        document.getElementById('activityChart').addEventListener('mouseout', function() {
+            document.getElementById('detail').style.display = 'none';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

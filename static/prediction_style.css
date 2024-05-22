@@ -1,0 +1,154 @@
+body {
+    text-align: center;
+    /*background-color: lightgray; /* 設置更柔和的灰色背景 */
+    background-image: url('Form_background5.jpg');
+    background-color: rgba(0, 0, 0, 0.45); /* 白色背景並設定35%透明度 */
+    background-position: 60% 60%;
+    background-size: cover;
+    background-blend-mode: overlay; /* 混合模式 */
+}
+
+form {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px; /* 圓角邊框 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加陰影效果 */
+    margin-top: 10px; /* 距離上方元素有20px間距 */
+    margin-left: auto; /* 水平居中 */
+    margin-right: auto; /* 水平居中 */
+    width: 70%; /* 設定寬度為父元素的80% */
+}
+
+.title{
+    margin-top: .5em;
+    margin-bottom: .6em;
+    text-align: center;
+    font-weight: 600;/* 字體加粗 */
+    font-size: 2.5rem; /* 標題字體大小 */
+    color: whitesmoke;  /*設定文字顏色 */
+}
+
+.title-p{
+    margin-bottom: .6em;
+    text-align: center;
+    font-weight: 600;/* 字體加粗 */
+    font-size: 1rem; /* 標題字體大小 */
+    color: whitesmoke;  /*設定文字顏色 */
+}
+
+button{
+    color: black; /* 按鈕文字顏色 */
+    /*border: 0 0 rgba(0, 0, 0, 0.15);  按鈕邊框 */
+    padding: 5px 15px;  /*按鈕內邊距 */
+    border-radius: 5px; /* 圓角邊框 */
+    cursor: pointer;
+    font-size: 18px; /* 按鈕字體大小 */
+    transition: background-color 0.3s, transform 0.2s;  /* 按鈕懸停效果 */
+}
+ 
+button:hover{
+    background-color: #115799b2; /* 設置更柔和的灰色背景 */
+    color: whitesmoke; /* 設定文字顏色為深灰色 */
+    font-family: 'Helvetica Neue', 'PingFang TC', 'Heiti TC', '微軟正黑體', sans-serif; /* 設定適合繁體中文的字體堆疊 */
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    padding: 1px;
+}
+
+.left-side {
+    /* 如果需要，可以設置最大寬度 */
+    max-width: 50%;
+}
+
+.right-side {
+    /* 如果需要，可以設置最大寬度 */
+    max-width: 50%;
+}
+
+.radar-chart {
+    overflow: hidden; /* 隱藏超出容器的部分 */
+    width: max-content; /* 讓容器的寬度緊貼內容的寬度 */
+    margin-right: auto; /* 讓容器水平居中 */
+    text-align: left; /* Align the content to the left */
+}
+
+p {
+    margin-top: .5em;
+    margin-bottom: .4em;
+    font-size: 1rem; /* 中標題字體大小 */
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem; /* 中標題字體大小 */
+    font-weight: 400;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.2rem; /* 小標題字體大小 */
+    font-weight: 400;
+}
+
+.detail{
+    margin-top: 0em;
+    margin-bottom: .4em;
+    text-align: left;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* 使背景半透明白色 */
+    border-radius: 10px; /* 圓角邊框 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加陰影效果 */
+    margin: 20px 0; /* 增加上下邊距 */
+    padding: 15px; /* 增加內部邊距 */
+}
+
+.card-body {
+    padding: 20px; /* 增加內部邊距 */
+}
+
+.collapse {
+    width: 70%; /* 設定寬度為父元素的70% */
+    margin-left: auto; /* 水平居中 */
+    margin-right: auto; /* 水平居中 */
+}
+
+button.site {
+    font-size: 25px; /* 增加按鈕的字體大小 */
+    /*padding: 5px 15px;  調整按鈕的內邊距 */
+}
+
+.ps{
+    text-align: left;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 0px;  /*距離底部的距離 */
+    right: 7em; /* 距離右邊的距離 */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px; /* 字體大小 */
+    color: rgba(0, 0, 0, 0.25); /* 透明黑色 */
+    transform: rotate(360deg); /* 旋轉角度 */
+    z-index: 1; /* 確保位於最底層 */
+}
