@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Five 人格測驗</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Big Five 人格測驗</h1>
+    <div id="progressbar">
+        <div id="progress"></div>
+    </div>
+<!-- Big Five 人格測驗表單 -->
+<form method="post" action="/">
+    <p>五大（Big 5）性格特質是一種人格特質分類法，我們將透過下面改編過的人格測驗來分類您在工作上的個性為何 ，請依照您在工作時的真實狀況進行回答。</p>
+    <p>總共 30 題，1 為非常不同意、5 為非常同意。請在每一題中選擇一個選項，並在完成後點擊送出。</p>
+        <div id="page1" class="page active">
+
+        <!-- Question 1 -->
+        <p>1. 我平時性格外向，喜歡交際，不排斥應酬</p>
+        <label><input type="radio" name="question1" value="1">1</label>
+        <label><input type="radio" name="question1" value="2">2</label>
+        <label><input type="radio" name="question1" value="3">3</label>
+        <label><input type="radio" name="question1" value="4">4</label>
+        <label><input type="radio" name="question1" value="5">5</label>
+
+        <!-- Question 2 -->
+        <p>2. 我在工作上常與同事意見不和</p>
+        <label><input type="radio" name="question2" value="1">1</label>
+        <label><input type="radio" name="question2" value="2">2</label>
+        <label><input type="radio" name="question2" value="3">3</label>
+        <label><input type="radio" name="question2" value="4">4</label>
+        <label><input type="radio" name="question2" value="5">5</label>
+
+        <!-- Question 3 -->
+        <p>3.  我工作時會先計劃且有條理</p>
+        <label><input type="radio" name="question3" value="1">1</label>
+        <label><input type="radio" name="question3" value="2">2</label>
+        <label><input type="radio" name="question3" value="3">3</label>
+        <label><input type="radio" name="question3" value="4">4</label>
+        <label><input type="radio" name="question3" value="5">5</label>
+
+        <!-- Question 4 -->
+        <p>4.  我在工作上善於處理壓力</p>
+        <label><input type="radio" name="question4" value="1">1</label>
+        <label><input type="radio" name="question4" value="2">2</label>
+        <label><input type="radio" name="question4" value="3">3</label>
+        <label><input type="radio" name="question4" value="4">4</label>
+        <label><input type="radio" name="question4" value="5">5</label>
+
+        <!-- Question 5 -->
+        <p>5.   我比較不重視簡報設計與排版</p>
+        <label><input type="radio" name="question5" value="1">1</label>
+        <label><input type="radio" name="question5" value="2">2</label>
+        <label><input type="radio" name="question5" value="3">3</label>
+        <label><input type="radio" name="question5" value="4">4</label>
+        <label><input type="radio" name="question5" value="5">5</label>
+
+        <!-- Question 6 -->
+        <p>6.  我更喜歡讓別人來領導負責</p>
+        <label><input type="radio" name="question6" value="1">1</label>
+        <label><input type="radio" name="question6" value="2">2</label>
+        <label><input type="radio" name="question6" value="3">3</label>
+        <label><input type="radio" name="question6" value="4">4</label>
+        <label><input type="radio" name="question6" value="5">5</label>
+
+        <!-- Question 7 -->
+        <p>7.  對同事較少同理心</p>
+        <label><input type="radio" name="question7" value="1">1</label>
+        <label><input type="radio" name="question7" value="2">2</label>
+        <label><input type="radio" name="question7" value="3">3</label>
+        <label><input type="radio" name="question7" value="4">4</label>
+        <label><input type="radio" name="question7" value="5">5</label>
+
+        <!-- Question 8 -->
+        <p>8.  我平時辦公時較為隨性，不會刻意安排工作順序</p>
+        <label><input type="radio" name="question8" value="1">1</label>
+        <label><input type="radio" name="question8" value="2">2</label>
+        <label><input type="radio" name="question8" value="3">3</label>
+        <label><input type="radio" name="question8" value="4">4</label>
+        <label><input type="radio" name="question8" value="5">5</label>
+
+        <!-- Question 9 -->
+        <p>9.  我在工作上經歷挫折後仍能保持樂觀</p>
+        <label><input type="radio" name="question9" value="1">1</label>
+        <label><input type="radio" name="question9" value="2">2</label>
+        <label><input type="radio" name="question9" value="3">3</label>
+        <label><input type="radio" name="question9" value="4">4</label>
+        <label><input type="radio" name="question9" value="5">5</label>
+
+        <!-- Question 10 -->
+        <p>10.  我對不同部門的工作事務都感興趣</p>
+        <label><input type="radio" name="question10" value="1">1</label>
+        <label><input type="radio" name="question10" value="2">2</label>
+        <label><input type="radio" name="question10" value="3">3</label>
+        <label><input type="radio" name="question10" value="4">4</label>
+        <label><input type="radio" name="question10" value="5">5</label>
+    </div>
+    <div id="page2" class="page">
+        <!-- Question 11 -->
+        <p>11.  我工作時常處於主導地位，像個領導一樣</p>
+        <label><input type="radio" name="question11" value="1">1</label>
+        <label><input type="radio" name="question11" value="2">2</label>
+        <label><input type="radio" name="question11" value="3">3</label>
+        <label><input type="radio" name="question11" value="4">4</label>
+        <label><input type="radio" name="question11" value="5">5</label>
+
+        <!-- Question 12 -->
+        <p>12.  在職場中我不相信別人，總是懷疑別人的意圖</p>
+        <label><input type="radio" name="question12" value="1">1</label>
+        <label><input type="radio" name="question12" value="2">2</label>
+        <label><input type="radio" name="question12" value="3">3</label>
+        <label><input type="radio" name="question12" value="4">4</label>
+        <label><input type="radio" name="question12" value="5">5</label>
+
+        <!-- Question 13 -->
+        <p>13.  我做事有效率，且有始有終</p>
+        <label><input type="radio" name="question13" value="1">1</label>
+        <label><input type="radio" name="question13" value="2">2</label>
+        <label><input type="radio" name="question13" value="3">3</label>
+        <label><input type="radio" name="question13" value="4">4</label>
+        <label><input type="radio" name="question13" value="5">5</label>
+
+        <!-- Question 14 -->
+        <p>14.  我在工作上情緒起伏較多</p>
+        <label><input type="radio" name="question14" value="1">1</label>
+        <label><input type="radio" name="question14" value="2">2</label>
+        <label><input type="radio" name="question14" value="3">3</label>
+        <label><input type="radio" name="question14" value="4">4</label>
+        <label><input type="radio" name="question14" value="5">5</label>
+
+        <!-- Question 15 -->
+        <p>15.  我做任何事都會重視藝術與審美</p>
+        <label><input type="radio" name="question15" value="1">1</label>
+        <label><input type="radio" name="question15" value="2">2</label>
+        <label><input type="radio" name="question15" value="3">3</label>
+        <label><input type="radio" name="question15" value="4">4</label>
+        <label><input type="radio" name="question15" value="5">5</label>
+
+        <!-- Question 16 -->
+        <p>16. 我工作時不如別人有活力</p>
+        <label><input type="radio" name="question16" value="1">1</label>
+        <label><input type="radio" name="question16" value="2">2</label>
+        <label><input type="radio" name="question16" value="3">3</label>
+        <label><input type="radio" name="question16" value="4">4</label>
+        <label><input type="radio" name="question16" value="5">5</label>
+
+        <!-- Question 17 -->
+        <p>17. 在職場上我樂於助人，待人無私</p>
+        <label><input type="radio" name="question17" value="1">1</label>
+        <label><input type="radio" name="question17" value="2">2</label>
+        <label><input type="radio" name="question17" value="3">3</label>
+        <label><input type="radio" name="question17" value="4">4</label>
+        <label><input type="radio" name="question17" value="5">5</label>
+
+        <!-- Question 18 -->
+        <p>18. 我是可靠的，總是值得他人信賴</p>
+        <label><input type="radio" name="question18" value="1">1</label>
+        <label><input type="radio" name="question18" value="2">2</label>
+        <label><input type="radio" name="question18" value="3">3</label>
+        <label><input type="radio" name="question18" value="4">4</label>
+        <label><input type="radio" name="question18" value="5">5</label>
+
+        <!-- Question 19 -->
+        <p>19. 我工作時容易感到緊張</p>
+        <label><input type="radio" name="question19" value="1">1</label>
+        <label><input type="radio" name="question19" value="2">2</label>
+        <label><input type="radio" name="question19" value="3">3</label>
+        <label><input type="radio" name="question19" value="4">4</label>
+        <label><input type="radio" name="question19" value="5">5</label>
+
+        <!-- Question 20 -->
+        <p>20. 我在工作上缺乏想像力</p>
+        <label><input type="radio" name="question20" value="1">1</label>
+        <label><input type="radio" name="question20" value="2">2</label>
+        <label><input type="radio" name="question20" value="3">3</label>
+        <label><input type="radio" name="question20" value="4">4</label>
+        <label><input type="radio" name="question20" value="5">5</label>
+    </div>
+    <div id="page3" class="page">
+        <!-- Question 21 -->
+        <p>21. 在職場上有時會害羞，比較內向</p>
+        <label><input type="radio" name="question21" value="1">1</label>
+        <label><input type="radio" name="question21" value="2">2</label>
+        <label><input type="radio" name="question21" value="3">3</label>
+        <label><input type="radio" name="question21" value="4">4</label>
+        <label><input type="radio" name="question21" value="5">5</label>
+
+        <!-- Question 22 -->
+        <p>22. 我在職場中待人謙遜禮讓</p>
+        <label><input type="radio" name="question22" value="1">1</label>
+        <label><input type="radio" name="question22" value="2">2</label>
+        <label><input type="radio" name="question22" value="3">3</label>
+        <label><input type="radio" name="question22" value="4">4</label>
+        <label><input type="radio" name="question22" value="5">5</label>
+
+        <!-- Question 23 -->
+        <p>23. 我在工作時效率較為低落</p>
+        <label><input type="radio" name="question23" value="1">1</label>
+        <label><input type="radio" name="question23" value="2">2</label>
+        <label><input type="radio" name="question23" value="3">3</label>
+        <label><input type="radio" name="question23" value="4">4</label>
+        <label><input type="radio" name="question23" value="5">5</label>
+
+        <!-- Question 24 -->
+        <p>24. 工作時我情緒穩定，不易生氣</p>
+        <label><input type="radio" name="question24" value="1">1</label>
+        <label><input type="radio" name="question24" value="2">2</label>
+        <label><input type="radio" name="question24" value="3">3</label>
+        <label><input type="radio" name="question24" value="4">4</label>
+        <label><input type="radio" name="question24" value="5">5</label>
+
+        <!-- Question 25 -->
+        <p>25. 我不喜歡參加公司的研討會</p>
+        <label><input type="radio" name="question25" value="1">1</label>
+        <label><input type="radio" name="question25" value="2">2</label>
+        <label><input type="radio" name="question25" value="3">3</label>
+        <label><input type="radio" name="question25" value="4">4</label>
+        <label><input type="radio" name="question25" value="5">5</label>
+
+        <!-- Question 26 -->
+        <p>26. 我工作時總是充滿熱情</p>
+        <label><input type="radio" name="question26" value="1">1</label>
+        <label><input type="radio" name="question26" value="2">2</label>
+        <label><input type="radio" name="question26" value="3">3</label>
+        <label><input type="radio" name="question26" value="4">4</label>
+        <label><input type="radio" name="question26" value="5">5</label>
+
+        <!-- Question 27 -->
+        <p>27. 我在工作上能信任他人，往最好的方面想</p>
+        <label><input type="radio" name="question27" value="1">1</label>
+        <label><input type="radio" name="question27" value="2">2</label>
+        <label><input type="radio" name="question27" value="3">3</label>
+        <label><input type="radio" name="question27" value="4">4</label>
+        <label><input type="radio" name="question27" value="5">5</label>
+
+        <!-- Question 28 -->
+        <p>28. 我有時對工作比較不負責任</p>
+        <label><input type="radio" name="question28" value="1">1</label>
+        <label><input type="radio" name="question28" value="2">2</label>
+        <label><input type="radio" name="question28" value="3">3</label>
+        <label><input type="radio" name="question28" value="4">4</label>
+        <label><input type="radio" name="question28" value="5">5</label>
+
+        <!-- Question 29 -->
+        <p>29. 在職場上時常覺得悲傷</p>
+        <label><input type="radio" name="question29" value="1">1</label>
+        <label><input type="radio" name="question29" value="2">2</label>
+        <label><input type="radio" name="question29" value="3">3</label>
+        <label><input type="radio" name="question29" value="4">4</label>
+        <label><input type="radio" name="question29" value="5">5</label>
+
+        <!-- Question 30 -->
+        <p>30. 在職場上我總能想出新點子</p>
+        <label><input type="radio" name="question30" value="1">1</label>
+        <label><input type="radio" name="question30" value="2">2</label>
+        <label><input type="radio" name="question30" value="3">3</label>
+        <label><input type="radio" name="question30" value="4">4</label>
+        <label><input type="radio" name="question30" value="5">5</label>
+    </div>
+    <button type="button" id="nextBtn" onclick="nextPage()">下一頁</button>
+    <button type="submit" id="submitBtn" style="display:none;">送出</button>
+</form>
+<script>
+    let currentPage = 1;
+    const pages = document.querySelectorAll('.page');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function nextPage() {
+        if (currentPage < pages.length) {
+            pages[currentPage - 1].style.display = 'none';
+            pages[currentPage].style.display = 'block';
+            currentPage++;
+            if (currentPage === pages.length) {
+                nextBtn.style.display = 'none'; // Hide next button
+                submitBtn.style.display = 'inline'; // Show submit button
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
