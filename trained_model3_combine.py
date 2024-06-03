@@ -11,7 +11,7 @@ import joblib
 #---------------------------------資料整理和模型訓練的功能-------------------------------------#
 def process_and_train(work_number, model_type='lasso'):
     # 匯入excel檔案
-    df = pd.read_excel(r'/Users/zhen/Desktop/VS studio/upgrade version/tes3_standard.xlsx')
+    df = pd.read_excel(r'C:/Users/YUN/Desktop/VS studio/upgrade version/tes3_standard.xlsx')
 
     # 選取指定的資料行
     rows_dict = {
@@ -30,7 +30,7 @@ def process_and_train(work_number, model_type='lasso'):
     # 分離數據為訓練集和測試集
     X = df[['E', 'A', 'C', 'N', 'O']]
     y = df['SATI']
-    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # 訓練模型
     if model_type == 'lasso':
@@ -43,9 +43,9 @@ def process_and_train(work_number, model_type='lasso'):
     elif model_type == 'linear':
         regressor = LinearRegression()
 
-    #regressor.fit(X_train, y_train)
-    #accuracy = regressor.score(X_test, y_test)
-    #print(f'{work_number} {model_type.capitalize()} Score: ', accuracy)
+    regressor.fit(X_train, y_train)
+    accuracy = regressor.score(X_test, y_test)
+    print(f'{work_number} {model_type.capitalize()} Score: ', accuracy)
 
     # 模型保存
     joblib.dump(regressor, f'{work_number}_{model_type}_model.joblib')
